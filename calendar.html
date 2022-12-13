@@ -1,0 +1,409 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <title>Seedling Theatre Company</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+                <link rel="stylesheet" href="../css/mystyle.css">
+
+                <!-- Google Fonts -->
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Serif">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pathway Gothic One">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudfalare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://cdnjs.cloudfalare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCaFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            
+        <title>Accordion Test</title>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax.libs/jquery/1.6.2/jquery.min.jis"></script>
+            <script type="text/javascript">
+                $(document).ready( function() {
+            
+                    //initialize accordion
+                    $('#Accordion ul').each( function() {
+                        var currentURI = window.location.href;
+                        var links = $('a', this);
+                        var collapse = true;
+                        for (var i = 0; i < links.size(); i++) {
+                            var elem = links.eq(i);
+                            var href = elem.attr('href');
+                            var hrefLength = href.length;
+                            var compareTo = currentURI.substr(-1*hrefLength);
+                            
+                            if (href == compareTo) {
+                                collapse = false;
+                                break;
+                            }
+                        };
+                        if (collapse) {
+                            $(this).hide();
+                        }
+                    });
+                    
+                    $("#Accordion").delegate('span', 'click', function() {
+                        var ul = $(this).next('ul');
+                        if (ul.is(':visbile')) {
+                            ul.slideUp(500);
+                        } else {
+                            $('#Accordion ul').not(ul).slideUp(500);
+                            ul.slideDown(500);
+                        }
+                        
+                    });
+                });
+            </script>
+   
+           
+        </head>
+
+        <body>
+            
+                <!-- Social Media Bar -->
+                    <div class="row text-white" style="background-color:#51716B">
+                        <div class="col-4 text-left">(702) 286-7242</div>
+                        <div class="col text-right">
+                            <img src="../images/icon%20fb.png" height="20px"> 
+                            <img src="../images/icon%20ig.png" height="20px"> 
+                            <img src="../images/icon%20tw.png" height="20px"> 
+                            <img src="../images/icon%20yt.png" height="20px">
+                        </div>
+                    </div>
+
+
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F8E6A5">
+
+                    <!-- Container wrapper -->
+                  <div class="container">
+
+                      <!-- Navbar brand -->
+                      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="../images/Seedling%20Theatre%20Logo%20Full%20Transparent.png"
+                          height="30px"
+                          alt="Logo"
+                          loading="lazy">
+                      </a>
+                      
+                      
+                      <!-- Toggle button -->
+                    <button class="navbar-toggler"
+                      type="button"
+                      data-mdb-toggle="collapse"
+                      data-mdb-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                       aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <!-- Links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Classes</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Registration &amp; Online Store</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Upcoming Shows</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                  </div>
+                  <!-- Container wrapper -->
+                </nav>
+                <!-- Navbar -->
+
+
+            <!-- Utility Navigation -->
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar">
+                
+                    <ul class="navvar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect">
+                            Shop
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item pl-2 mb-2 mb-md-0">
+                        <a href="#" type="button"
+                           class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+            
+            <header>
+                  <!-- Background image -->
+                  <div class="text-center bg-image" style="background-image: url('https://static.wixstatic.com/media/335dda_1471daf4c0514508a3174bf3fcc83514~mv2.jpg/v1/crop/x_364,y_277,w_2568,h_1920/fill/w_632,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_0045.jpg');
+                        height: 400px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        margin-bottom: 20px;">
+                  </div>
+                  <!-- Background image -->                     
+            </header>
+
+            <div class="container py-5"> 
+                
+                <!-- Intro of Seedling Calendar -->
+                <h2 class="text-center mb-5">Welcome to our Calendar Page! <br>Please take a look at our upcoming shows and register your kids today. Show dates are filling up quickly!</h2>
+            
+            
+            <!-- Calendar -->
+            <div class="calendar shadow bg-white p-5">
+                <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+                    
+                    
+                    <!-- Month Dropdown Selection -->
+                        <div class="dropdown"><h2 class="month font-weight-bold mb-0 text-uppercase"><span>July 2022</span></h2>
+                            <div class="dropdown-content">January<br>February<br>March<br>April<br>May<br>June<br>July<br>August<br>September<br>October<br>November<br>December<br></div>
+                        </div>
+                    
+                    <!-- initialize accordion -->
+                    <ul id="Accordion" class="accordion">
+                        <li>
+                        
+                            <span><div class="link"><i class="fa fa-bullhorn"></i>Seedling Theatre<i class="fa fa-chevron-down"></i></div></span>
+                            <ul class="submenu">
+                                <li><a href="#">Frozen Cast</a></li>
+                                <li><a href="#">Classes</a></li>
+                                <li><a href="#">Resources</a></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                        
+                            <span><div class="link"><i class="fa fa-asterisk"></i>Intro Classes<i class="fa fa-chevron-down"></i></div></span>
+                            <ul class="submenu">
+                                <li><a href="#">Musical</a></li>
+                                <li><a href="#">Theater</a></li>
+                                <li><a href="#">Sprouts</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                        
+                            <span><div class="link"><i class="fa fa-bars"></i>Adv Classes<i class="fa fa-chevron-down"></i></div></span>
+                            <ul class="submenu">
+                                <li><a href="#">Design</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <span>INFO</span>
+                                <ul>
+                                    <li><a href="#">Dance I</a></li>
+                                    <li><a href="#">Dance II</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+               
+                    
+                    
+                    
+                    
+                    
+                    
+                    <nav class="navbar navbar-default">
+                        <div class="containter-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only"> Toggle navigation</span>
+                                    <span class="text">FILTERS</span>
+                                </button>
+                            </div>
+                        
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#"><span class="text-white" target="_blank">Instructors</span></a></li>
+                                    <li class="active"><a href="#">Frozen Cast<span class="sr-only"> (current)</span></a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Classes<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Musical</a></li>
+                                                <li><a href="#">Design</a></li>
+                                                <li><a href="#">Acting</a></li>
+                                                <li><a href="#" target="_blank">Sprouts</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Dance I</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Dance II</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="#">Resources</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Age Groups</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>    
+                
+                    <p class="font-italic text-muted mb-5"> No events for this day.</p>
+                    <ol class="day-names list-unstyled">
+                        <li class="font-weight-bold text-uppercase">Sun</li>
+                        <li class="font-weight-bold text-uppercase">Mon</li>
+                        <li class="font-weight-bold text-uppercase">Tue</li>
+                        <li class="font-weight-bold text-uppercase">Wed</li>
+                        <li class="font-weight-bold text-uppercase">Thu</li>
+                        <li class="font-weight-bold text-uppercase">Fri</li>
+                        <li class="font-weight-bold text-uppercase">Sat</li>
+                    </ol>
+
+                    <ol class="days list-unstyled">
+                        <li>
+                            <div class="date">1</div>
+                            <div class="event bg-success"> Recital: 8-12 YRS</div>
+                        </li>
+                        <li>
+                            <div class="date">2</div>
+                        </li>
+                        <li>
+                            <div class="date">3</div>
+                        </li>
+                        <li>
+                            <div class="date">4</div>
+                        </li>
+                        <li>
+                            <div class="date">5</div>
+                        </li>
+                        <li>
+                            <div class="date">6</div>
+                        </li>
+                        <li>
+                            <div class="date">7</div>
+                        </li>
+                </ol>
+
+                <ol class="days list-unstyled">
+                        <li>
+                            <div class="date">8</div>
+                        </li>
+                        <li>
+                            <div class="date">9</div>
+                        </li>
+                        <li>
+                            <div class="date">10</div>
+                        </li>
+                        <li>
+                            <div class="date">11</div>
+                        </li>
+                        <li>
+                            <div class="date">12</div>
+                        </li>
+                        <li>
+                            <div class="date">13</div>
+                        </li>
+                        <li>
+                            <div class="date">14</div>
+                        </li>
+                </ol>
+                <ol class="days list-unstyled">
+                        <li>
+                            <div class="date">15</div>
+                        </li>
+                        <li>
+                            <div class="date">16</div>
+                        </li>
+                        <li>
+                            <div class="date">17</div>
+                        </li>
+                        <li>
+                            <div class="date">18</div>
+                        </li>
+                        <li>
+                            <div class="date">19</div>
+                        </li>
+                        <li>
+                            <div class="date">20</div>
+                        </li>
+                        <li>
+                            <div class="date">21</div>
+                        </li>
+                </ol>
+                 <ol class="days list-unstyled">
+                        <li>
+                            <div class="date">22</div>
+                        </li>
+                        <li>
+                            <div class="date">23</div>
+                        </li>
+                        <li>
+                            <div class="date">24</div>
+                        </li>
+                        <li>
+                            <div class="date">25</div>
+                        </li>
+                        <li>
+                            <div class="date">26</div>
+                        </li>
+                        <li>
+                            <div class="date">27</div>
+                        </li>
+                        <li>
+                            <div class="date">28</div>
+                        </li>
+                </ol>
+                <ol class="days list-unstyled">
+                        <li>
+                            <div class="date">29</div>
+                        </li>
+                        <li>
+                            <div class="date">30</div>
+                        </li>
+                        <li>
+                            <div class="date">31</div>
+                        </li>
+                </ol>
+
+            </div>
+
+            </div>
+
+
+            
+            
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+        </body>
+    </html>
